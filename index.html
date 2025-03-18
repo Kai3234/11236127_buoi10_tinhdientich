@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Chu Vi & Diện Tích</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="back.js"></script>
+</head>
+  <body>
+    <div class="container">
+      <h2>Tính Chu Vi & Diện Tích</h2>
+      <label for="shape">Chọn hình:</label>
+      <select id="shape" onchange="showForm()">
+        <option value="rectangle">Hình Chữ Nhật</option>
+        <option value="square">Hình Vuông</option>
+        <option value="triangle">Hình Tam Giác</option>
+      </select>
+      
+      <div id="rectangleForm" class="shapeForm">
+        <label for="length">Chiều dài:</label>
+        <br />
+        <input type="number" id="length" placeholder="Nhập chiều dài">
+        <label for="width">Chiều rộng:</label>
+        <br />
+        <input type="number" id="width" placeholder="Nhập chiều rộng">
+        <button onclick="calculateRectangle()">Tính</button>
+      </div>
+      
+      <div id="squareForm" class="shapeForm hidden">
+        <label for="side">Cạnh:</label>
+        <input type="number" id="side" placeholder="Nhập cạnh">
+        <button onclick="calculateSquare()">Tính</button>
+      </div>
+      
+      <div id="triangleForm" class="shapeForm hidden">
+        <label for="a">Cạnh a:</label>
+        <input type="number" id="a" placeholder="Nhập cạnh a">
+        <label for="b">Cạnh b:</label>
+        <input type="number" id="b" placeholder="Nhập cạnh b">
+        <label for="c">Cạnh c:</label>
+        <input type="number" id="c" placeholder="Nhập cạnh c">
+        <button onclick="calculateTriangle()">Tính</button>
+      </div>
+      <div id="result"></div>
+    </div>
+  </body>
+</html>
